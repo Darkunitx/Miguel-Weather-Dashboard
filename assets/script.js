@@ -18,12 +18,15 @@ function handleSearchFormSubmit() {
             console.log(cityLon);
             console.log(data)
 
+
+            var today = dayjs();
+            $('#currentDate').text(today.format('dddd MMMM D YYYY'));
+
+            var cityName = document.querySelector('#cityName');
+            cityName.textContent = data[0].name;
+
             weatherChecker(cityLat, cityLon);
         });
-
-
-    console.log(searchInputVal);
-
 
 }
 
@@ -31,9 +34,26 @@ function handleSearchFormSubmit() {
 function weatherChecker(lat, lon) {
 
 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apikey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apikey}&units=imperial`)
         .then((response) => response.json())
-        .then((data) => console.log("secondApiCall", data));
+        .then((data) => {
+
+        var currentTemp = document.querySelector('#currentTemp');
+        currentTemp.textContent = "Current Temp: " + data.list[0].main.temp;
+        
+        var currentHumidity = document.querySelector('#currentHumidity');
+        currentHumidity.textContent = "Current Humidity: " + data.list[0].main.humidity;
+
+        var currentWindSpeed = document.querySelector('#currentWindSpeed');
+        currentWindSpeed.textContent = "Current Wind Speed: " + data.list[0].wind.speed + " miles per hour.";
+
+
+
+            console.log("secondApiCall", data)});
+
+
+
+
 }
 
 searchFormEl.addEventListener('click', handleSearchFormSubmit);

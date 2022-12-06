@@ -1,92 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Weather Dashboard</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+   <link rel="stylesheet" href="./assets/style.css">
+   <title>Weather Dashboard</title>
 </head>
 
 <body class="d-flex .flex-column-reverse flex-wrap justify-content-around ">
-   <div> 
-     <header>
-        <h1 id="h1id" > Weather Dashboard</h1>
-     </header>
+   <div>
+      <header>
+         <h1 id="h1id"> Weather Dashboard</h1>
+      </header>
 
-     <section>
-        <h2 id="h2id"> Search for a City:</h2>
-           <input type="text" id="search-input" placeholder="search...">
-           <button type="button" class="btn btn-primary">Search</button>
-     </section>
-   </div>  
-
-   <div>  
       <section>
-         <h2 id="h3id"> CityName</h2>
-         <p> Temp: </p>
-         <p> humidity: </p>
-         <p> Wind Speed: </p>
+         <h2 id="h2id"> Search for a City:</h2>
+         <input type="text" id="search-input" placeholder="search...">
+         <button type="button" class="btn btn-primary">Search</button>
+      </section>
+   </div>
+
+   <div>
+      <section>
+         <h2 id="cityName"> CityName</h2>
+         <p id="currentDate"> Date:</p>
+         <p id="currentTemp"> Temp: </p>
+         <p id="currentHumidity"> humidity: </p>
+         <p id="currentWindSpeed"> Wind Speed: </p>
       </section>
 
-      <section>      
+      <section>
          <h2 id="h2id"> 5-Day Forecast:</h2>
-            <div class="d-flex flex-wrap flex-row justify-content-around bd-highlight mx-5 px-5"> 
-               <section> 
-                  <h3 id="firstDay"> Date</h3>
-                  <p> Temp: </p>
-                  <p> humidity: </p>
-                  <p> Wind Speed: </p>
-               </section>
-               <section>
-                  <h3 id="secondDay"> Date</h3>
-                  <p> Temp: </p>
-                  <p> humidity: </p>
-                  <p> Wind Speed: </p>
-               </section>
-               <section>
-                  <h3 id="thirdDay"> Date</h3>
-                  <p> Temp: </p>
-                  <p> humidity: </p>
-                  <p> Wind Speed: </p>
-               </section>
-               <section>
-                  <h3 id="fourthDay"> Date</h3>
-                  <p> Temp: </p>
-                  <p> humidity: </p>
-                  <p> Wind Speed: </p>
-               </section>
-               <section>
-                  <h3 id="fifthDay"> Date</h3>
-                  <p> Temp: </p>
-                  <p> humidity: </p>
-                  <p> Wind Speed: </p>
-               </section>
-            </div>
+         <div class="d-flex flex-wrap flex-row justify-content-around bd-highlight mx-5 px-5">
+            <section class="day1">
+               <p id="date1"> Date:</p>
+               <p id="temp1"> Temp: </p>
+               <p id="humidity1"> humidity: </p>
+               <p id="windSpeed1"> Wind Speed: </p>
+            </section>
 
-      </section>   
-   </div>  
+            <section class="day2">
+               <p id="date2"> Date:</p>
+               <p id="temp2"> Temp: </p>
+               <p id="humidity2"> humidity: </p>
+               <p id="windSpeed2"> Wind Speed: </p>
+            </section>
+
+            <section class="day3">
+               <p id="date3"> Date:</p>
+               <p id="temp3"> Temp: </p>
+               <p id="humidity3"> humidity: </p>
+               <p id="windSpeed3"> Wind Speed: </p>
+            </section>
+
+            <section class="day4">
+               <p id="date4"> Date:</p>
+               <p id="temp4"> Temp: </p>
+               <p id="humidity4"> humidity: </p>
+               <p id="windSpeed4"> Wind Speed: </p>
+            </section>
+
+            <section class="day5">
+               <p id="date5"> Date:</p>
+               <p id="temp5"> Temp: </p>
+               <p id="humidity5"> humidity: </p>
+               <p id="windSpeed5"> Wind Speed: </p>
+            </section>
+         </div>
+
+      </section>
+   </div>
 
 
-   <script
-   src="https://code.jquery.com/jquery-3.6.1.js"
-   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-   crossorigin="anonymous"></script>
- <script
-   src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-   integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-   crossorigin="anonymous"
- ></script>
-    <script src="assets/script.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+   <script src="assets/script.js"></script>
 </body>
+
 </html>
