@@ -1,5 +1,5 @@
 var apikey = "2329612b90eeda34110cadd2c06ae7c5";
-var searchFormEl = document.querySelector('#search-input');
+var searchFormEl = document.querySelector('.btn');
 
 
 function handleSearchFormSubmit() {
