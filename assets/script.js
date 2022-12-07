@@ -90,6 +90,20 @@ function weatherChecker(lat, lon) {
         windSpeedFour.textContent = "Wind Speed: " + data.list[32].wind.speed + " miles per hour.";
         windSpeedFive.textContent = "Wind Speed: " + data.list[39].wind.speed + " miles per hour.";
 
+        var currentIcon = document.querySelector('#currentIcon');
+        var iconOne = document.querySelector('#icon1');
+        var iconTwo = document.querySelector('#icon2');
+        var iconThree = document.querySelector('#icon3');
+        var iconFour = document.querySelector('#icon4');
+        var iconFive = document.querySelector('#icon5');
+        currentIcon.innerHTML =`Icon: <img src=http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png>`;
+        iconOne.innerHTML =`Icon: <img src=http://openweathermap.org/img/wn/${data.list[8].weather[0].icon}.png>`;
+        iconTwo.innerHTML =`Icon: <img src=http://openweathermap.org/img/wn/${data.list[16].weather[0].icon}.png>`;
+        iconThree.innerHTML =`Icon: <img src=http://openweathermap.org/img/wn/${data.list[24].weather[0].icon}.png>`;
+        iconFour.innerHTML =`Icon: <img src=http://openweathermap.org/img/wn/${data.list[32].weather[0].icon}.png>`;
+        iconFive.innerHTML =`Icon: <img src=http://openweathermap.org/img/wn/${data.list[39].weather[0].icon}.png>`;
+
+
 
 
             console.log("secondApiCall", data)});
