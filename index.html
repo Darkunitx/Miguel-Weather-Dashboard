@@ -12,7 +12,7 @@
    <title>Weather Dashboard</title>
 </head>
 
-<body class="d-flex .flex-column-reverse flex-wrap justify-content-around ">
+<body>
    <div>
       <header>
          <h1 id="h1id"> Weather Dashboard</h1>
@@ -23,7 +23,13 @@
          <input type="text" id="search-input" placeholder="search...">
          <button type="button" class="btn btn-primary">Search</button>
       </section>
+
+      <section>
+         <h2 id="history">History:</h2>
+      </section>
+
    </div>
+
 
    <div>
       <section class="card bg-light mb-3" style="max-width: 18rem;">
@@ -35,9 +41,9 @@
          <p id="currentIcon"> Icon:</p>
       </section>
 
-      <section>
+      <section class="d-flex flex-wrap flex-column"> 
          <h2 id="h2id"> 5-Day Forecast:</h2>
-         <div class="d-flex flex-wrap flex-column justify-content-around bd-highlight mx-5 px-5">
+         <div class="d-flex flex-wrap flex-column justify-content-around bd-highlight mx-5 px-5 row">
             <section class="day1 card text-white bg-primary mb-3" style="max-width: 18rem;">
                <p id="date1"> Date:</p>
                <p id="temp1"> Temp: </p>

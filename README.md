@@ -15,10 +15,13 @@
 - <a href="https://darkunitx.github.io/Miguel-Weather-Dashboard/">Weather Dashboard Live Website</a>
 - <a href="https://github.com/Darkunitx/Miguel-Weather-Dashboard">Weather Dashboard Github Repo</a>
 
-![Website screenshot]( "Website screenshot")
+![Website screenshot](./assets/Images/chrome_WUOLZZhuX2.png "Website screenshot")
+![Website screenshot](./assets/Images/chrome_EbAz5Eoybm.png "Website screenshot")
 
 ## Credits 
 - in collaboration with :
+- Nicholas Mamberger https://github.com/NickHM05
+- Tutor Scott Everett
 
 
 - Websites utilized : 
@@ -29,6 +32,7 @@
 - https://openweathermap.org/api/geocoding-api
 - https://openweathermap.org/forecast5
 - https://home.openweathermap.org/api_keys
+- https://getbootstrap.com/docs/4.0/components/card/
 
 
 
