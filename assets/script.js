@@ -5,7 +5,7 @@ var searchFormEl = document.querySelector('.btn');
 function handleSearchFormSubmit() {
 
     var searchInputVal = document.querySelector('#search-input').value;
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q="
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q="
         + searchInputVal
         + "&appid="
         + apikey)
