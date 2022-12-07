@@ -39,6 +39,18 @@ function weatherChecker(lat, lon) {
         .then((response) => response.json())
         .then((data) => {
 
+        var dateOne = document.querySelector('#date1');
+        var dateTwo = document.querySelector('#date2');
+        var dateThree = document.querySelector('#date3');
+        var dateFour = document.querySelector('#date4');
+        var dateFive = document.querySelector('#date5');
+        dateOne.textContent = "Date: " + data.list[8].dt_txt;
+        dateTwo.textContent = "Date: " + data.list[16].dt_txt;
+        dateThree.textContent = "Date: " + data.list[24].dt_txt;
+        dateFour.textContent = "Date: " + data.list[32].dt_txt;
+        dateFive.textContent = "Date: " + data.list[39].dt_txt;
+
+
         var currentTemp = document.querySelector('#currentTemp');
         var tempOne = document.querySelector('#temp1');
         var tempTwo = document.querySelector('#temp2');
@@ -59,14 +71,24 @@ function weatherChecker(lat, lon) {
         var humidityFour = document.querySelector('#humidity4');
         var humidityFive = document.querySelector('#humidity5');
         currentHumidity.textContent = "Current Humidity: " + data.list[0].main.humidity + " %";
-        humidityOne.textContent = "Current Humidity: " + data.list[8].main.humidity + " %";
-        humidityTwo.textContent = "Current Humidity: " + data.list[16].main.humidity + " %";
-        humidityThree.textContent = "Current Humidity: " + data.list[24].main.humidity + " %";
-        humidityFour.textContent = "Current Humidity: " + data.list[32].main.humidity + " %";
-        humidityFive.textContent = "Current Humidity: " + data.list[39].main.humidity + " %";
+        humidityOne.textContent = "Humidity: " + data.list[8].main.humidity + " %";
+        humidityTwo.textContent = "Humidity: " + data.list[16].main.humidity + " %";
+        humidityThree.textContent = "Humidity: " + data.list[24].main.humidity + " %";
+        humidityFour.textContent = "Humidity: " + data.list[32].main.humidity + " %";
+        humidityFive.textContent = "Humidity: " + data.list[39].main.humidity + " %";
 
         var currentWindSpeed = document.querySelector('#currentWindSpeed');
+        var windSpeedOne = document.querySelector('#windSpeed1');
+        var windSpeedTwo = document.querySelector('#windSpeed2');
+        var windSpeedThree = document.querySelector('#windSpeed3');
+        var windSpeedFour = document.querySelector('#windSpeed4');
+        var windSpeedFive = document.querySelector('#windSpeed5');
         currentWindSpeed.textContent = "Current Wind Speed: " + data.list[0].wind.speed + " miles per hour.";
+        windSpeedOne.textContent = "Wind Speed: " + data.list[8].wind.speed + " miles per hour.";
+        windSpeedTwo.textContent = "Wind Speed: " + data.list[16].wind.speed + " miles per hour.";
+        windSpeedThree.textContent = "Wind Speed: " + data.list[24].wind.speed + " miles per hour.";
+        windSpeedFour.textContent = "Wind Speed: " + data.list[32].wind.speed + " miles per hour.";
+        windSpeedFive.textContent = "Wind Speed: " + data.list[39].wind.speed + " miles per hour.";
 
 
 
